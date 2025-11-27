@@ -10,11 +10,18 @@
   },
   "devDependencies": {
     "@cap-js/sqlite": "^2",
-    "@sap/cds-dk": "^9"
+    "@sap/cds-dk": "^9",
+    "cds-plugin-ui5": "^0.13.0",
+    "rimraf": "^5.0.5",
+    "mbt": "^1.2.29"
   },
   "scripts": {
     "start": "cds-serve",
-     "dev": "cds watch"
+    "dev": "cds watch",
+    "watch-project101app": "cds watch --open demo.purchase.project101app/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "undeploy": "cf undeploy project101 --delete-services --delete-service-keys --delete-service-brokers",
+    "build": "rimraf resources mta_archives && mbt build --mtar archive",
+    "deploy": "cf deploy mta_archives/archive.mtar --retries 1"
   },
   "private": true,
   "cds": {
@@ -23,5 +30,8 @@
         "auth": "xsuaa"
       }
     }
-  }
+  },
+  "workspaces": [
+    "app/*"
+  ]
 }

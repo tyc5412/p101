@@ -24,3 +24,9 @@ File or Folder | Purpose
 
 Learn more at https://cap.cloud.sap/docs/get-started/.
 # p101
+
+
+1、新建cap
+    可以preview 页面
+2、生成fiori basic using 1生成的Odata
+    自动添加到配置文件，可以自动显示
