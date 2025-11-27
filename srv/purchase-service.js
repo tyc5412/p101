@@ -2,12 +2,12 @@ module.exports = function (cds, io) {
     const { Purchases } = cds.entities('demo.purchase');
 
 
-    cds.on('CREATE', 'Purchases', async (req) => {
-        req.data.ID = req.data.ID || cds.utils.uuid();
-        req.data.createdAt = new Date();
-        req.data.status = 'CREATED';
-        return cds.tx(req).run(req.query);
-    });
+    // cds.on('CREATE', 'Purchases', async (req) => {
+    //     req.data.ID = req.data.ID || cds.utils.uuid();
+    //     req.data.createdAt = new Date();
+    //     req.data.status = 'CREATED';
+    //     return cds.tx(req).run(req.query);
+    // });
 
 
     cds.on('submitForApproval', async (req) => {

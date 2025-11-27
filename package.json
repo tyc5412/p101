@@ -17,7 +17,7 @@
   },
   "scripts": {
     "start": "cds-serve",
-    "dev": "cds watch",
+    "dev": "cds watch --inspect",
     "watch-project101app": "cds watch --open demo.purchase.project101app/index.html?sap-ui-xx-viewCache=false --livereload false",
     "undeploy": "cf undeploy project101 --delete-services --delete-service-keys --delete-service-brokers",
     "build": "rimraf resources mta_archives && mbt build --mtar archive",

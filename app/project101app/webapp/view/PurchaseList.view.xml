@@ -1,6 +1,41 @@
-<mvc:View controllerName="demo.purchase.project101app.controller.PurchaseList"
+<mvc:View
+    controllerName="demo.purchase.project101app.controller.PurchaseList"
     xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
+    xmlns="sap.m"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+    >
+        <content>
+            <VBox>
+                <Input
+                    id="title"
+                    placeholder="标题"
+                />
+                <Input
+                    id="amount"
+                    placeholder="金额"
+                />
+                <Button
+                    text="提交"
+                    press="onSubmit"
+                />
+                <Button
+                    text="查询"
+                    press="onSelect"
+                />
+                <List
+                    id="list"
+                    items="{ /Purchases }"
+                >
+                    <StandardListItem
+                        title="{title}"
+                        description="{amount}"
+                        info="{status}"
+                    />
+                </List>
+            </VBox>
+        </content>
     </Page>
 </mvc:View>
