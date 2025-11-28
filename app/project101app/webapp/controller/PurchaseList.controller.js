@@ -6,20 +6,22 @@ sap.ui.define([
 
     return Controller.extend("demo.purchase.project101app.controller.PurchaseList", {
         onInit() {
-            const oModel = new sap.ui.model.odata.v4.ODataModel({
-                serviceUrl: "/odata/v4/purchase/"
-            });
-            this.getView().setModel(oModel);
+            // 默认已经设置，在此不需要写代码
+            // const oModel = new sap.ui.model.odata.v4.ODataModel({
+            //     serviceUrl: "/odata/v4/purchase/"
+            // });
+            // this.getView().setModel(oModel);
 
-            this.byId("list").bindItems({
-                path: "/Purchases",
-                template: new ObjectListItem({
-                    title: "{title}",
-                    number: "{amount}",
-                    numberUnit: "USD",
-                    intro: "{status}"
-                })
-            });
+            // 方法一：js绑定数据方式；方法二：XML也可以直接在list上写items=“/Purchases”
+            // this.byId("list").bindItems({
+            //     path: "/Purchases",
+            //     template: new ObjectListItem({
+            //         title: "{title}",
+            //         number: "{amount}",
+            //         numberUnit: "USD",
+            //         intro: "{status}"
+            //     })
+            // });
         },
 
         onItemPress(oEvent) {

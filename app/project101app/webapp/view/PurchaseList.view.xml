@@ -10,11 +10,22 @@
                 <Input id="amount" placeholder="金额" />
                 <Button text="提交1" press="onSubmit" />
                 <Button text="查询2" press="onSelect" />
+                
+                <!-- 方法一：js绑定数据 -->
+                <!-- <List
+                    id="list"   
+                    select="onItemPress"
+                    mode="SingleSelectMaster" 
+                >
+                </List> -->
+                <!-- 方法二：页面绑定方式items -->
                 <List
                     id="list"
-                    select="onItemPress"
+                    items="{/Purchases}"
                     mode="SingleSelectMaster"
-                /> 
+                    itemPress="onItemPress">
+                    <StandardListItem title="{title}" number="{amount}" numberUnit= "USD" intro= "{status}"/>
+                </List>
 
             </VBox>
         </content>
