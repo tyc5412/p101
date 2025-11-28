@@ -80,9 +80,8 @@
         "dataSource": "mainService",
         "preload": true,
         "settings": {
-          "operationMode": "Server",
-          "autoExpandSelect": true,
-          "earlyRequests": true
+          "synchronizationMode": "None",
+          "groupId": "$direct"
         }
       }
     },
@@ -112,12 +111,22 @@
           "target": [
             "TargetPurchaseList"
           ]
+        },
+        {
+          "pattern": "detail/{ID}", 
+          "name": "PurchaseDetail",
+          "target": "PurchaseDetail"
         }
       ],
       "targets": {
         "TargetPurchaseList": {
           "id": "PurchaseList",
           "name": "PurchaseList"
+        },
+        "PurchaseDetail": {
+          "viewId": "PurchaseDetail",
+          "viewName": "PurchaseDetail",
+          "viewType": "XML"
         }
       }
     },

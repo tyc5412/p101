@@ -1,0 +1,20 @@
+<mvc:View
+    controllerName="demo.purchase.project101app.controller.PurchaseDetail"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+
+    <Page id="detailPage" showNavButton="true" navButtonPress="onNavBack"
+          title="Purchase Detail">
+        <ObjectHeader
+            title="{Title}"
+            number="{Amount}" />
+
+        <VBox class="sapUiMediumMargin">
+            <ObjectIdentifier title="ID" text="{ID}" />
+            <ObjectIdentifier title="Created At" text="{path: 'CreatedAt', type:'sap.ui.model.type.DateTime'}" />
+            <ObjectIdentifier title="Created By" text="{CreatedBy}" />
+            <ObjectIdentifier title="Description" text="{Description}" />
+        </VBox>
+    </Page>
+
+</mvc:View>

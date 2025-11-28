@@ -3,38 +3,19 @@
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m"
 >
-    <Page
-        id="page"
-        title="{i18n>title}"
-    >
+    <Page title="Purchase List">
         <content>
             <VBox>
-                <Input
-                    id="title"
-                    placeholder="标题"
-                />
-                <Input
-                    id="amount"
-                    placeholder="金额"
-                />
-                <Button
-                    text="提交"
-                    press="onSubmit"
-                />
-                <Button
-                    text="查询"
-                    press="onSelect"
-                />
+                <Input id="title" placeholder="标题" />
+                <Input id="amount" placeholder="金额" />
+                <Button text="提交1" press="onSubmit" />
+                <Button text="查询2" press="onSelect" />
                 <List
                     id="list"
-                    items="{ /Purchases }"
-                >
-                    <StandardListItem
-                        title="{title}"
-                        description="{amount}"
-                        info="{status}"
-                    />
-                </List>
+                    select="onItemPress"
+                    mode="SingleSelectMaster"
+                /> 
+
             </VBox>
         </content>
     </Page>
