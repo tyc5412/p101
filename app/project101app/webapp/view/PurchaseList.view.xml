@@ -12,20 +12,20 @@
                 <Button text="查询2" press="onSelect" />
                 
                 <!-- 方法一：js绑定数据 -->
-                <!-- <List
+                <List
                     id="list"   
                     select="onItemPress"
                     mode="SingleSelectMaster" 
                 >
-                </List> -->
+                </List>
                 <!-- 方法二：页面绑定方式items -->
-                <List
+                <!-- <List
                     id="list"
                     items="{/Purchases}"
                     mode="SingleSelectMaster"
                     itemPress="onItemPress">
-                    <StandardListItem title="{title}" number="{amount}" numberUnit= "USD" intro= "{status}"/>
-                </List>
+                    <StandardListItem title="{title}"/>
+                </List> -->
 
             </VBox>
         </content>

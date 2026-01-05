@@ -13,15 +13,15 @@ sap.ui.define([
             // this.getView().setModel(oModel);
 
             // 方法一：js绑定数据方式；方法二：XML也可以直接在list上写items=“/Purchases”
-            // this.byId("list").bindItems({
-            //     path: "/Purchases",
-            //     template: new ObjectListItem({
-            //         title: "{title}",
-            //         number: "{amount}",
-            //         numberUnit: "USD",
-            //         intro: "{status}"
-            //     })
-            // });
+            this.byId("list").bindItems({
+                path: "/Purchases",
+                template: new ObjectListItem({
+                    title: "{title}",
+                    number: "{amount}",
+                    numberUnit: "USD",
+                    intro: "{status}"
+                })
+            });
         },
 
         onItemPress(oEvent) {
